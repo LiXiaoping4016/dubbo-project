@@ -1,0 +1,20 @@
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:2181 # 注册中心地址
+  protocol:
+    port: -1 # 随机端口号
+    name: dubbo
+  metadata-report:
+    address: zookeeper://127.0.0.1:2181 # dubbo-admin需要这个配置上报meta信息
+provider:
+  service:
+    version: 0.0.1
+
+spring:
+  application:
+    name: dubbo-provider
+  main:
+    allow-bean-definition-overriding: true # 不设置会与Spring Boot冲突
+
+server:
+  port: 8001

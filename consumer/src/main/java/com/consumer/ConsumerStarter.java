@@ -1,19 +1,19 @@
-package com.producer;
+package com.consumer;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 生产者启动类
+ * 消费者启动类
  *
  * @Author lixp23692
  * @Date 2020.04.03
  */
 @SpringBootApplication
 @EnableDubbo
-public class ProducerStarter {
+public class ConsumerStarter {
     public static void main(String[] args) {
-        SpringApplication.run(ProducerStarter.class, args);
+        SpringApplication.run(ConsumerStarter.class, args);
     }
 }
